@@ -5,7 +5,7 @@
 (function(Mozilla) {
     'use strict';
 
-    var $shield = $('#tracking-protection-animation');
+    const $shield = $('#tracking-protection-animation');
 
     function registerTabVisibility() {
         window.dataLayer.push({
@@ -16,7 +16,7 @@
 
     Mozilla.HighlightTarget.init('.button.dark');
 
-    $('.button.dark').on('highlight-target', function() {
+    $('.button.dark').on('highlight-target', () => {
         $shield.addClass('blocked');
     });
 
